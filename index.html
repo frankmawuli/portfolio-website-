@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">YourName</a>
+
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#works" class="nav-link">Works</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <p class="eyebrow">Hey There,</p>
+          <h1 class="display">I’m <span class="accent">Your Name</span></h1>
+          <p class="lead">I design beautifully simple things — UI/UX & front-end dev. I love what I do.</p>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-num" data-target="10">0</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num" data-target="285">0</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num" data-target="190">0</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#works">View Work</a>
+            <a class="btn ghost" href="#contact">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="portrait-frame">
+            <div class="portrait-initials">YN</div>
+            <div class="brush"></div>
+          </div>
+          <div class="badge">IDF Certified • UI/UX Designer</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">What do I help?</h2>
+        <p class="section-sub">I help companies and startups design modern, usable digital products and grow their businesses.</p>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="icon">🌐</div>
+            <h3>Website Design</h3>
+            <p>High-converting, responsive websites designed for user experience.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">📱</div>
+            <h3>Mobile App Design</h3>
+            <p>Mobile-first interactive UI designs and prototypes.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">🏷️</div>
+            <h3>Brand Identity</h3>
+            <p>Brand systems, logos, and visual identity guidelines.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section light">
+      <div class="container about-grid">
+        <div>
+          <h2 class="section-title">About Me</h2>
+          <p>I combine visual design with front-end development to craft polished digital experiences. I enjoy working end-to-end — from research and design to building responsive interfaces.</p>
+
+          <ul class="skill-list">
+            <li>UI/UX Design</li>
+            <li>Responsive Front-end (HTML/CSS/JS)</li>
+            <li>Prototyping & Accessibility</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Quick facts</h3>
+          <p><strong>Location:</strong> Accra, Ghana</p>
+          <p><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></p>
+          <p><strong>Availability:</strong> Open for freelance & remote roles</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE (timeline) -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">My Work Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>UI/UX Designer — New Man Services</h4>
+              <p class="muted">Jan 2020 – Present</p>
+              <p>Lead design on product features, design systems and user research.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>Visual Designer — Global Solution</h4>
+              <p class="muted">Jun 2017 – Dec 2019</p>
+              <p>Worked on branding and marketing design for clients across industries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS / PORTFOLIO -->
+    <section id="works" class="section light">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">My Latest Works</h2>
+          <div class="filters">
+            <button class="filter-btn active" data-filter="*">All</button>
+            <button class="filter-btn" data-filter="web">Web Design</button>
+            <button class="filter-btn" data-filter="app">App Design</button>
+            <button class="filter-btn" data-filter="brand">Branding</button>
+          </div>
+        </div>
+
+        <div class="works-grid" id="worksGrid">
+          <!-- Example project cards -->
+          <article class="project-card" data-type="web">
+            <div class="project-thumb"></div>
+            <div class="project-body">
+              <h4>Agency Website</h4>
+              <p class="muted">Web — UI/UX</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-type="app">
+            <div class="project-thumb"></div>
+            <div class="project-body">
+              <h4>Mobile App Concept</h4>
+              <p class="muted">App — Interaction Design</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-type="brand">
+            <div class="project-thumb"></div>
+            <div class="project-body">
+              <h4>Brand Identity Pack</h4>
+              <p class="muted">Branding</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-type="web">
+            <div class="project-thumb"></div>
+            <div class="project-body">
+              <h4>E-commerce Redesign</h4>
+              <p class="muted">Web — UX</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <h2 class="section-title">People talk about us</h2>
+        <div class="testimonials">
+          <div class="testimonial-slider" id="testimonialSlider">
+            <blockquote class="testimonial">
+              <p>“Excellent designer — thoughtful, punctual and creative. Highly recommended!”</p>
+              <footer>— John Addison, Founder</footer>
+            </blockquote>
+
+            <blockquote class="testimonial">
+              <p>“Turned our concept into a polished product with delightful UX.”</p>
+              <footer>— Sandra K., Product Manager</footer>
+            </blockquote>
+
+            <blockquote class="testimonial">
+              <p>“Reliable and easy to work with. Great attention to detail.”</p>
+              <footer>— Samuel H., CEO</footer>
+            </blockquote>
+          </div>
+
+          <div class="testimonial-controls">
+            <button id="prevTest">←</button>
+            <button id="nextTest">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <section id="contact" class="section light">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title">Let's make something amazing together</h2>
+          <p>Start by saying hi — I'll respond within 48 hours.</p>
+
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></li>
+            <li><strong>Phone:</strong> +233 24 000 0000</li>
+          </ul>
+        </div>
+
+        <form id="contactForm" class="card contact-form" action="#" onsubmit="return false;">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+
+          <div>
+            <button type="submit" class="btn primary">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div>© <span id="year"></span> Your Name</div>
+          <div class="socials">
+            <a href="#" aria-label="Twitter">T</a>
+            <a href="#" aria-label="Dribbble">D</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
