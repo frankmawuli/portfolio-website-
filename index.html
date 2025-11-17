@@ -3,28 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Your Name</title>
+  <title>Portfolio — Creative Designer & Developer</title>
+  <meta name="description" content="Professional UI/UX Designer and Front-end Developer creating beautiful digital experiences" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home">YourName</a>
+      <a class="brand" href="#home">Frank Mawuli</a>
 
       <nav class="nav" id="nav">
         <ul>
           <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#works" class="nav-link">Works</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+       
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        <button id="themeToggle" aria-label="Toggle theme">�</button>
         <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
       </div>
     </div>
@@ -36,12 +38,12 @@
       <div class="container hero-grid">
         <div class="hero-left">
           <p class="eyebrow">Hey There,</p>
-          <h1 class="display">I’m <span class="accent">Your Name</span></h1>
-          <p class="lead">I design beautifully simple things — UI/UX & front-end dev. I love what I do.</p>
+          <h1 class="display">I'm <span class="accent" >Frank Mawuli</span></h1>
+          <p class="lead">I'm a fullstack developer focused on building more scalable mobile and web applications.</p>
 
           <div class="hero-stats">
             <div class="stat">
-              <div class="stat-num" data-target="10">0</div>
+              <div class="stat-num" data-target="5">0</div>
               <div class="stat-label">Years Experience</div>
             </div>
             <div class="stat">
@@ -55,17 +57,20 @@
           </div>
 
           <div class="hero-cta">
-            <a class="btn primary" href="#works">View Work</a>
+            <a class="btn primary" href="#works">
+              <span>View Work</span>
+              <span>→</span>
+            </a>
             <a class="btn ghost" href="#contact">Contact Me</a>
           </div>
         </div>
 
         <div class="hero-right">
           <div class="portrait-frame">
-            <div class="portrait-initials">YN</div>
+            <!-- <div class="portrait-initials">YN</div>
             <div class="brush"></div>
-          </div>
-          <div class="badge">IDF Certified • UI/UX Designer</div>
+          </div> -->
+          <img src="./profile.jpg" class="portrait" alt="">
         </div>
       </div>
     </section>
@@ -78,21 +83,28 @@
 
         <div class="services-grid">
           <article class="service-card">
-            <div class="icon">🌐</div>
-            <h3>Website Design</h3>
-            <p>High-converting, responsive websites designed for user experience.</p>
+            <div class="icon">
+              <img src="./programming.png" class="service-card-image"/>
+            </div>
+            <h3>Frontend Development</h3>
+  <p>I build  responsive user interfaces using HTML, CSS, JavaScript, and React. My focus is  and great user experience.</p>
           </article>
 
           <article class="service-card">
-            <div class="icon">📱</div>
-            <h3>Mobile App Design</h3>
-            <p>Mobile-first interactive UI designs and prototypes.</p>
+            <div class="icon">
+              <img src="./server.png" class="service-card-image"/>
+            </div>
+            <h3>Backend Development</h3>
+  <p>I develop secure, scalable, and efficient backend systems using Node.js and express</p>
           </article>
 
           <article class="service-card">
-            <div class="icon">🏷️</div>
-            <h3>Brand Identity</h3>
-            <p>Brand systems, logos, and visual identity guidelines.</p>
+            <div class="icon">
+                <img src="./ai.png" class="service-card-image"/>
+
+            </div>
+            <h3>AI Development</h3>
+              <p>I build intelligent AI solutions ranging from chatbots to smart workflow tools that enhance productivity.</p>
           </article>
         </div>
       </div>
@@ -103,49 +115,135 @@
       <div class="container about-grid">
         <div>
           <h2 class="section-title">About Me</h2>
-          <p>I combine visual design with front-end development to craft polished digital experiences. I enjoy working end-to-end — from research and design to building responsive interfaces.</p>
+          <p>I combine visual design with front-end development to craft polished digital experiences. I enjoy working end-to-end — from research and design to building responsive, accessible interfaces that make a difference.</p>
+
 
           <ul class="skill-list">
-            <li>UI/UX Design</li>
-            <li>Responsive Front-end (HTML/CSS/JS)</li>
-            <li>Prototyping & Accessibility</li>
+            <h1>Tech Stack</h1>
+
+            <li>Next js  </li>
+            <li>Typescript  </li>
+            <li>Postgress sql</li>
+            <li>Javascript </li>
+            <li>Node js </li>
+            <li>Java </li>
+            <li>Python </li>
+
+
+            <li style="display: flex; align-items: center ;">
+              
+              React & React Native
+            </li>
           </ul>
         </div>
 
-        <div class="card">
+        <div class="card quick-facts-card">
           <h3>Quick facts</h3>
-          <p><strong>Location:</strong> Accra, Ghana</p>
-          <p><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></p>
-          <p><strong>Availability:</strong> Open for freelance & remote roles</p>
+          <div class="fact-item">
+            <span class="fact-icon">📍</span>
+            <div>
+              <strong>Location</strong>
+              <p>Accra, Ghana</p>
+            </div>
+          </div>
+          <div class="fact-item">
+            <span class="fact-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:you@example.com">slymawuli3@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="fact-item">
+            <span class="fact-icon">💼</span>
+            <div>
+              <strong>Availability</strong>
+              <p>Open for freelance & remote roles</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- EXPERIENCE (timeline) -->
-    <section id="experience" class="section">
-      <div class="container">
-        <h2 class="section-title">My Work Experience</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h4>UI/UX Designer — New Man Services</h4>
-              <p class="muted">Jan 2020 – Present</p>
-              <p>Lead design on product features, design systems and user research.</p>
-            </div>
-          </div>
+   <section id="experience" class="section">
+  <div class="container">
+    <h2 class="section-title">My Work Experience</h2>
 
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h4>Visual Designer — Global Solution</h4>
-              <p class="muted">Jun 2017 – Dec 2019</p>
-              <p>Worked on branding and marketing design for clients across industries.</p>
-            </div>
-          </div>
+    <div class="timeline">
+
+      <!-- Wemakespace -->
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h4>Mobile App Developer — Wemakespace</h4>
+          <p class="muted">2024 – Present</p>
+          <p>
+            Worked closely with UI/UX designers to implement the Hives Real Estate mobile app.
+            Integrated backend APIs to enable dynamic data flow and core functionalities.
+            Collaborated with the dev team to debug, test, and refine features, ensuring a reliable
+            and user-friendly real estate mobile solution.
+          </p>
         </div>
       </div>
-    </section>
+
+      <!-- Data Leap Technologies -->
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h4>Frontend Developer Intern — Data Leap Technologies</h4>
+          <p class="muted">Apr 2024 – Jun 2024 • Accra, Ghana</p>
+          <p>
+            Designed and developed custom business websites using React and CSS frameworks.
+            Improved performance and engagement through responsive design and cross-browser compatibility.
+            Implemented reusable code best practices.
+            Contributed to the Kulobal Health online marketplace, enhancing digital pharmacy procurement
+            across Ghana and West Africa.
+          </p>
+        </div>
+      </div>
+
+      <!-- Future of Work Hackathon -->
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h4>MVP Future of Work Hackathon</h4>
+          <p class="muted">2024 – Present • Accra, Ghana</p>
+          <p>
+            Secured 2nd place at the Future of Work Hackathon, University of Ghana.
+            Developed a blockchain-powered Electronic Identity System using Hyperledger Fabric,
+            enabling secure decentralized identity ownership.
+          </p>
+        </div>
+      </div>
+
+      <!-- Educ8ate Africa -->
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h4>Fullstack Web Developer — Educ8ate Africa</h4>
+          <p class="muted">Dec 2024 • Accra, Ghana</p>
+          <p>
+            Collaborated with a team to design and build fully responsive websites.
+            Assisted in creating client-focused solutions tailored to business needs.
+          </p>
+        </div>
+        
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h4>Volunteer NASA Space Apps Challenge</h4>
+          <p class="muted">Dec 2024 • Accra, Ghana</p>
+           <p>
+            Volunteered during the NASA Space Apps Challenge, supporting participants with technical
+            coordination, problem-solving, and project organization. Helped foster collaboration,
+            innovation, and smooth event execution for teams working on space and Earth science solutions.
+          </p>
+        </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- WORKS / PORTFOLIO -->
     <section id="works" class="section light">
@@ -154,78 +252,73 @@
           <h2 class="section-title">My Latest Works</h2>
           <div class="filters">
             <button class="filter-btn active" data-filter="*">All</button>
-            <button class="filter-btn" data-filter="web">Web Design</button>
-            <button class="filter-btn" data-filter="app">App Design</button>
-            <button class="filter-btn" data-filter="brand">Branding</button>
+            <button class="filter-btn" data-filter="web">Frontend Development</button>
+            <button class="filter-btn" data-filter="app">Backend Development</button>
+            <button class="filter-btn" data-filter="brand">AI development</button>
           </div>
         </div>
 
         <div class="works-grid" id="worksGrid">
           <!-- Example project cards -->
           <article class="project-card" data-type="web">
-            <div class="project-thumb"></div>
-            <div class="project-body">
-              <h4>Agency Website</h4>
-              <p class="muted">Web — UI/UX</p>
+           <a href="https://kulobalhealth.com" target="_blank" rel="noopener noreferrer" class="project-link">
+             <div class="project-thumb">
+              <img src="./kulobal.png" alt="" style="width: 100% ;">
             </div>
+            <div class="project-body">
+              <h4>Kulobal Health Website </h4>
+              <p class="muted">Frontend Development</p>
+            </div>
+           </a>
           </article>
 
-          <article class="project-card" data-type="app">
-            <div class="project-thumb"></div>
-            <div class="project-body">
-              <h4>Mobile App Concept</h4>
-              <p class="muted">App — Interaction Design</p>
+
+          <article class="project-card" data-type="web">
+           <a href="https://kulobalhealth.com" target="_blank" rel="noopener noreferrer" class="project-link">
+             <div class="project-thumb">
+              <img src="./kulobal.png" alt="" style="width: 100%;">
             </div>
+            <div class="project-body">
+              <h4>Grits Consortium Website </h4>
+              <p class="muted">Frontend Development</p>
+            </div>
+           </a>
           </article>
 
-          <article class="project-card" data-type="brand">
-            <div class="project-thumb"></div>
-            <div class="project-body">
-              <h4>Brand Identity Pack</h4>
-              <p class="muted">Branding</p>
+
+            
+            
+          
+
+          <article class="project-card" data-type="web">
+           <a href="https://kulobalhealth.com" target="_blank" rel="noopener noreferrer" class="project-link">
+             <div class="project-thumb">
+              <img src="./kulobal.png" alt="" style="width: 100% ;">
             </div>
+            <div class="project-body">
+              <h4>Excel Agency App </h4>
+              <p class="muted">Fullstack Development</p>
+            </div>
+           </a>
           </article>
 
           <article class="project-card" data-type="web">
-            <div class="project-thumb"></div>
-            <div class="project-body">
-              <h4>E-commerce Redesign</h4>
-              <p class="muted">Web — UX</p>
+           <a href="https://texconnect-website.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">
+             <div class="project-thumb">
+              <img src="./texconnect.png" alt="" style="width: 100% ;">
             </div>
+            <div class="project-body">
+              <h4>Texconnect Website  </h4>
+              <p class="muted">Frontend Development</p>
+            </div>
+           </a>
           </article>
         </div>
       </div>
     </section>
 
     <!-- TESTIMONIALS -->
-    <section id="testimonials" class="section">
-      <div class="container">
-        <h2 class="section-title">People talk about us</h2>
-        <div class="testimonials">
-          <div class="testimonial-slider" id="testimonialSlider">
-            <blockquote class="testimonial">
-              <p>“Excellent designer — thoughtful, punctual and creative. Highly recommended!”</p>
-              <footer>— John Addison, Founder</footer>
-            </blockquote>
-
-            <blockquote class="testimonial">
-              <p>“Turned our concept into a polished product with delightful UX.”</p>
-              <footer>— Sandra K., Product Manager</footer>
-            </blockquote>
-
-            <blockquote class="testimonial">
-              <p>“Reliable and easy to work with. Great attention to detail.”</p>
-              <footer>— Samuel H., CEO</footer>
-            </blockquote>
-          </div>
-
-          <div class="testimonial-controls">
-            <button id="prevTest">←</button>
-            <button id="nextTest">→</button>
-          </div>
-        </div>
-      </div>
-    </section>
+  
 
     <!-- CONTACT / FOOTER -->
     <section id="contact" class="section light">
@@ -234,9 +327,9 @@
           <h2 class="section-title">Let's make something amazing together</h2>
           <p>Start by saying hi — I'll respond within 48 hours.</p>
 
-          <ul class="contact-list">
-            <li><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></li>
-            <li><strong>Phone:</strong> +233 24 000 0000</li>
+          <ul class="contact-list" style="list-style: none;">
+            <li><strong>Email: </strong> <a href="mailto:you@example.com">slymawuli3@gmail.com.com</a></li>
+            <li><strong>Phone:</strong> +233 59 286 5265</li>
           </ul>
         </div>
 
@@ -264,11 +357,12 @@
 
       <footer class="site-footer">
         <div class="container footer-inner">
-          <div>© <span id="year"></span> Your Name</div>
+          <div>© <span id="year"></span>frankmawuli</div>
           <div class="socials">
-            <a href="#" aria-label="Twitter">T</a>
-            <a href="#" aria-label="Dribbble">D</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="Dribbble">Db</a>
             <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="GitHub">GH</a>
           </div>
         </div>
       </footer>
