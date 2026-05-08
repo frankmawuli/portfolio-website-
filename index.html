@@ -348,38 +348,47 @@
   
 
     <!-- CONTACT / FOOTER -->
-    <section id="contact" class="section light">
-      <div class="container contact-grid">
-        <div>
-          <h2 class="section-title">Let's build your next product</h2>
-          <p>Start by saying hi — I'll respond within 48 hours.</p>
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-card">
 
-          <ul class="contact-list" style="list-style: none;">
-            <li><strong>Email: </strong> <a href="mailto:slymawuli3@gmail.com">slymawuli3@gmail.com</a></li>
-            <li><strong>Phone:</strong> +233 59 286 5265</li>
-          </ul>
-        </div>
-
-        <form id="contactForm" class="card contact-form" action="#" onsubmit="return false;">
-          <label>
-            <span>Name</span>
-            <input type="text" name="name" required />
-          </label>
-
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" required />
-          </label>
-
-          <label>
-            <span>Message</span>
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-
-          <div>
-            <button type="submit" class="btn primary">Send Message</button>
+          <!-- Form side -->
+          <div class="contact-form-side">
+            <h1>Have a project in mind?</h1>
+            <h2 class="contact-form-title">Hit me up!</h2>
+            <form id="contactForm" action="#" onsubmit="return false;">
+              <div class="form-row">
+                <input type="text" name="firstname" placeholder="First Name" required />
+                <input type="text" name="lastname" placeholder="Last Name" required />
+              </div>
+              <div class="form-row">
+                <input type="email" name="email" placeholder="Email Address" required />
+                <input type="tel" name="phone" placeholder="Phone Number" />
+              </div>
+              <textarea name="message" rows="5" placeholder="Message" required></textarea>
+              <div class="form-submit">
+                <button type="submit" class="btn primary">Send Message</button>
+              </div>
+            </form>
           </div>
-        </form>
+
+          <!-- Info side -->
+          <div class="contact-info-side">
+            <h3 class="info-title">Info</h3>
+            <ul class="info-list">
+              <li><i class="fa-solid fa-location-dot"></i> Accra, Ghana</li>
+              <li><i class="fa-solid fa-envelope"></i> slymawuli3@gmail.com</li>
+              <li><i class="fa-solid fa-phone"></i> +233 59 286 5265</li>
+            </ul>
+            <div class="info-socials">
+              <a href="https://github.com/frankmawuli" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/frank-mawuli-8ab7b2287/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://wa.me/+233592865265" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <footer class="site-footer">
