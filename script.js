@@ -10,9 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollTopBtn = document.getElementById("scrollTop");
   const filterBtns = document.querySelectorAll(".filter-btn");
   const projects = document.querySelectorAll(".project-card");
-  const testimonialSlider = document.getElementById("testimonialSlider");
-  const prevTest = document.getElementById("prevTest");
-  const nextTest = document.getElementById("nextTest");
 
   // SET YEAR
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -210,72 +207,43 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   );
 
-  // Testimonials slider with enhanced transitions
-  let tIndex = 0;
-  const slides = Array.from(testimonialSlider.children);
-  const updateTestimonials = () => {
-    slides.forEach((s, i) => {
-      s.style.transform = `translateX(${100 * (i - tIndex)}%)`;
-      s.style.opacity = i === tIndex ? "1" : "0";
-      s.style.transition =
-        "transform 500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 500ms ease";
-    });
-  };
-  updateTestimonials();
+  // EmailJS — replace these three values from your EmailJS dashboard
+  const EMAILJS_PUBLIC_KEY  = "bHZLwgTC3ANjpqMos";
+  const EMAILJS_SERVICE_ID  = "service_if0ccqh";
+  const EMAILJS_TEMPLATE_ID = "template_hyw4fef";
 
-  prevTest.addEventListener("click", () => {
-    tIndex = (tIndex - 1 + slides.length) % slides.length;
-    updateTestimonials();
-  });
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
-  nextTest.addEventListener("click", () => {
-    tIndex = (tIndex + 1) % slides.length;
-    updateTestimonials();
-  });
-
-  // Autoplay testimonials with pause on interaction
-  let autoTest = setInterval(() => {
-    tIndex = (tIndex + 1) % slides.length;
-    updateTestimonials();
-  }, 5000);
-
-  const pauseAutoplay = () => clearInterval(autoTest);
-  const resumeAutoplay = () => {
-    clearInterval(autoTest);
-    autoTest = setInterval(() => {
-      tIndex = (tIndex + 1) % slides.length;
-      updateTestimonials();
-    }, 5000);
-  };
-
-  [prevTest, nextTest, testimonialSlider].forEach((el) => {
-    el.addEventListener("mouseenter", pauseAutoplay);
-    el.addEventListener("mouseleave", resumeAutoplay);
-  });
-
-  // Contact form demo handler with better UX
   const contactForm = document.getElementById("contactForm");
   contactForm?.addEventListener("submit", (e) => {
     e.preventDefault();
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
 
-    // Show loading state
     submitBtn.textContent = "Sending...";
     submitBtn.disabled = true;
 
-    // Simulate sending
-    setTimeout(() => {
-      submitBtn.textContent = "✓ Message Sent!";
-      setTimeout(() => {
+    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm)
+      .then(() => {
+        submitBtn.textContent = "✓ Message Sent!";
+        submitBtn.style.background = "linear-gradient(135deg, #16a34a, #15803d)";
         contactForm.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        alert(
-          "Thanks for reaching out! This is a demo form (no backend connected)."
-        );
-      }, 1500);
-    }, 1000);
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.style.background = "";
+          submitBtn.disabled = false;
+        }, 3000);
+      })
+      .catch((err) => {
+        console.error("EmailJS error:", err);
+        submitBtn.textContent = "Failed — Try Again";
+        submitBtn.style.background = "linear-gradient(135deg, #dc2626, #b91c1c)";
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.style.background = "";
+          submitBtn.disabled = false;
+        }, 3000);
+      });
   });
 
   // Ensure nav hides on resize appropriately
